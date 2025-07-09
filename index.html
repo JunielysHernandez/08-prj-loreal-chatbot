@@ -64,3 +64,99 @@
     <script src="script.js"></script>
   </body>
 </html>
+  <div class="page-wrapper">
+     <!------- Header / Branding ------->
+     <header class="site-header">
+       <div class="logo-container">
+         <img src="img/loreal-logo.png" alt="L'Oréal" class="logo" />
+       </div>
+       <h1 class="site-title">Beauty Assistant</h1>
+       <p class="tagline">Because You're Worth It</p>
+     </header>
+
+
+     <!------- Chat Area ------->
+     <main>
+       <section class="chatbox">
+         <div id="chatWindow" class="chat-window">
+           <!-- messages will be appended here via JS -->
+         </div>
+
+
+         <form id="chatForm" class="chat-form">
+           <label for="userInput" class="visually-hidden">Message</label>
+           <input
+             id="userInput"
+             name="userInput"
+             type="text"
+             placeholder="Ask me about L'Oréal products, skincare routines, or beauty tips…"
+             autocomplete="off"
+             required
+           />
+           <button type="submit" id="sendBtn">
+             <span class="material-icons">send</span>
+             <span class="visually-hidden">Send</span>
+           </button>
+         </form>
+
+
+         <!-- Quick Reply Buttons -->
+         <div class="quick-replies" aria-label="Suggested questions">
+           <button
+             type="button"
+             class="quick-reply-btn"
+             data-message="Tell me about L'Oréal skincare products"
+           >
+             🧴 Skincare Products
+           </button>
+           <button
+             type="button"
+             class="quick-reply-btn"
+             data-message="What haircare products does L'Oréal offer"
+           >
+             💆‍♀️ Haircare Range
+           </button>
+           <button
+             type="button"
+             class="quick-reply-btn"
+             data-message="How do I apply makeup with L'Oréal products"
+           >
+             💄 Makeup Tips
+           </button>
+           <button
+             type="button"
+             class="quick-reply-btn"
+             data-message="What are L'Oréal's best-selling products"
+           >
+             ⭐ Best Sellers
+           </button>
+         </div>
+       </section>
+     </main>
+
+
+     <!------- Footer Links ------->
+     <footer class="site-footer">
+       <p>&copy; 2025 L'Oréal. All rights reserved.</p>
+       <nav>
+         <a href="https://www.loreal.com/en/privacy-policy/" target="_blank"
+           >Privacy Policy</a
+         >
+         <a href="https://www.loreal.com/en/terms-of-use/" target="_blank"
+           >Terms of Use</a
+         >
+         <a href="https://www.loreal.com/en/contact/" target="_blank"
+           >Contact</a
+         >
+       </nav>
+     </footer>
+   </div>
+
+
+   <!-- Remove secrets.js when using Cloudflare Workers for secure API requests -->
+   <!-- <script src="secrets.js"></script> -->
+   <script src="script.js"></script>
+ </body>
+</html>
+
+
