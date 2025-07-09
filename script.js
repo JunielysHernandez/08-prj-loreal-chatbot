@@ -18,7 +18,7 @@ const sendBtn = document.getElementById("sendBtn");
 
 /* Configuration */
 // Replace this URL with your Cloudflare Worker endpoint
-const CLOUDFLARE_WORKER_URL = "https://beauty-assistant.herna954.workers.dev";
+const CLOUDFLARE_WORKER_URL = "https://beauty-assistant.herna954.workers.dev/";
 
 
 /* System prompt to ensure L'Oréal-focused responses */
