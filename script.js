@@ -255,3 +255,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeChat();
   userInput.focus();
 });
+
+// (Removed Cloudflare Worker code - only browser-side code remains in this file)
+
+// ...existing code...

@@ -40,14 +40,14 @@ export default {
       }
 
       // Require API key from environment variable only
-      const apiKey = env.API_Key;
+      const apiKey = env.OPENAI_API_KEY;
       if (!apiKey) {
         return new Response(
           JSON.stringify({
-            error: "API_Key not configured in environment variables.",
+            error: "OPENAI_API_KEY not configured in environment variables.",
             debug: `Available env vars: ${Object.keys(env).join(", ")}`,
-            apiKeyFound: !!env.API_Key,
-            apiKeyLength: env.API_Key ? env.API_Key.length : 0,
+            apiKeyFound: !!env.OPENAI_API_KEY,
+            apiKeyLength: env.OPENAI_API_KEY ? env.OPENAI_API_KEY.length : 0,
           }),
           { status: 500, headers: corsHeaders }
         );
@@ -159,7 +159,7 @@ DEPLOYMENT INSTRUCTIONS:
 2. Create a new Worker
 3. Replace the default code with this code
 4. In Settings > Environment Variables, add:
-  - Variable name: API_Key
+  - Variable name: OPENAI_API_KEY
   - Value: your-openai-api-key
 5. Deploy the Worker
 6. Copy the Worker URL and update it in script.js (CLOUDFLARE_WORKER_URL variable)
