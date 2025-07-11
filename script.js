@@ -228,7 +228,8 @@ async function sendToOpenAI(userMessage) {
     return aiResponse;
   } catch (error) {
     console.error("Error calling OpenAI API:", error);
-    return "I apologize, but I'm having trouble connecting right now. Please try again in a moment. In the meantime, feel free to visit loreal.com for product information! 🌟";
+    // Provide a clickable link to L'Oréal's website in the error message
+    return "I apologize, but I'm having trouble connecting right now. Please try again in a moment. In the meantime, feel free to visit <a href='https://www.loreal.com/' target='_blank'>loreal.com</a> for product information! 🌟";
   }
 }
 
@@ -258,4 +259,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // (Removed Cloudflare Worker code - only browser-side code remains in this file)
 
-// ...existing code...
+// const apiKey = env.OPENAI_API_KEY; // Removed duplicate declaration
